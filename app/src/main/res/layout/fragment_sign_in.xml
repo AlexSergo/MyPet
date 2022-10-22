@@ -7,8 +7,79 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_marginTop="93dp"
+        android:textSize="28sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/authorization"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/email_field"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="253dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_hint"/>
+
+    <EditText
+        android:id="@+id/password_field"
+        android:inputType="textPassword"
+        android:layout_marginTop="315dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_hint"/>
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="569dp"
+        android:backgroundTint="@color/inactive_button"
+        android:text="@string/sign_in"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="634dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:background="@color/color_hint"
+        android:layout_height="1sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="651dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:text="если у вас еще нет учетной записи, "
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="651dp"
+        android:layout_marginRight="23dp"
+        android:text="зарегистрируйтесь"
+        android:textColor="@color/active_button"
+        android:textSize="12sp" />
 
 </FrameLayout>
