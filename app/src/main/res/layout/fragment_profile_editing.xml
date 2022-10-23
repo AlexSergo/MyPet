@@ -6,9 +6,93 @@
     tools:context=".ProfileEditingFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_btn_previous"
+        app:borderWidth="0dp" />
+
+    <ImageView
+        android:id="@+id/avatar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="150dp"
+        tools:src="@drawable/img" />
+
+    <TextView
+        android:id="@+id/name_of_user"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="173dp"
+        android:text="@string/name" />
+
+    <TextView
+        android:id="@+id/email_of_user"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="203dp"
+        android:gravity="center"
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/name_field"
+        android:inputType="text"
+        android:layout_marginTop="377dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_hint"/>
+
+    <EditText
+        android:id="@+id/phone_field"
+        android:inputType="phone"
+        android:layout_marginTop="439dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_hint"/>
+
+    <EditText
+        android:id="@+id/repeat_password_field"
+        android:inputType="textPassword"
+        android:layout_marginTop="501dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/repeat_password"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/color_hint"/>
+
+    <Button
+        android:id="@+id/button_change_data"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="569dp"
+        android:backgroundTint="@color/inactive_button"
+        android:text="@string/change_data"
+        android:textSize="12sp" />
 
 </FrameLayout>

@@ -6,9 +6,14 @@
     <string name="registration">Регистрация</string>
     <string name="email">Почта</string>
     <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
     <string name="sign_in">Войти</string>
     <string name="sign_up">Зарегистрироваться</string>
     <string name="name">Имя</string>
     <string name="surname">Фамилия</string>
     <string name="phone">Телефон</string>
+    <string name="change_data">Изменить данные</string>
+    <string name="edit">Редактировать</string>
+    <string name="exit">Выход</string>
+    <string name="delete_account">Удалить аккаунт</string>
 </resources>
