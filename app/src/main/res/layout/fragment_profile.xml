@@ -7,6 +7,7 @@
     tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
+<<<<<<< HEAD
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -45,6 +46,16 @@
         android:layout_marginTop="203dp"
         android:gravity="center"
         android:text="@string/email" />
+=======
+    <TextView
+        android:layout_marginTop="93dp"
+        android:textSize="28sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/black" />
+>>>>>>> 577f40e07b236af71793bf6f53324ba057fa3cf2
 
     <Button
         android:id="@+id/edit"
@@ -78,6 +89,7 @@
         android:backgroundTint="@color/active_button"
         android:text="@string/delete_account"
         android:textSize="12sp"/>
+<<<<<<< HEAD
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -87,5 +99,7 @@
         app:itemIconSize="40dp"
         app:itemIconTint="@color/active_button"
         app:menu="@menu/bottom_navigation_menu" />
+=======
+>>>>>>> 577f40e07b236af71793bf6f53324ba057fa3cf2
 
 </FrameLayout>
