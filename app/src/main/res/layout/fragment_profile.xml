@@ -78,13 +78,4 @@
         android:text="@string/delete_account"
         android:textSize="12sp"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        app:itemIconSize="40dp"
-        app:itemIconTint="@color/active_button"
-        app:menu="@menu/bottom_navigation_menu" />
-
 </FrameLayout>
