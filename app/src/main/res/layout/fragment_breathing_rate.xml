@@ -11,18 +11,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        android:src="@drawable/ic_btn_previous"
-        android:borderWidth="0dp" />
+        android:src="@drawable/ic_btn_previous"/>
 
     <TextView
-        android:layout_marginTop="93dp"
-        android:textSize="28sp"
+        android:layout_marginTop="60dp"
+        android:textSize="22sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/breathing_rate"
         android:textColor="@color/black"/>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="125dp"
+        android:background="#00FFFFFF"
+        android:text="@string/day"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="125dp"
+        android:background="#00FFFFFF"
+        android:text="@string/week"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="125dp"
+        android:background="#00FFFFFF"
+        android:text="@string/month"
+        android:textColor="@color/black" />
 
 
 </FrameLayout>
