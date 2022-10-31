@@ -55,4 +55,40 @@
         android:background="#00FFFFFF"
         android:text="@string/month"
         android:textColor="@color/black" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less"
+        android:layout_width="44dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="180dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:id="@+id/day_month_year"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="12 октября 2022"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_marginTop="240dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:gravity="center"
+        android:text="16:44"
+        android:textColor="@color/black"/>
 </FrameLayout>
