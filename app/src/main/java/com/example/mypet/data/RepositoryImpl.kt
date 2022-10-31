@@ -2,59 +2,36 @@ package com.example.mypet.data
 
 import com.example.mypet.data.local_data_source.PetDao
 import com.example.mypet.data.remote_data_source.PetApi
-import com.example.mypet.data.remote_data_source.model.BreathingRateResponse
-import com.example.mypet.data.remote_data_source.model.HeartRateResponse
-import com.example.mypet.data.remote_data_source.model.PressureResponse
-import com.example.mypet.data.remote_data_source.model.TemperatureResponse
+import com.example.mypet.data.remote_data_source.model.parameters.ParametersResponse
+import com.example.mypet.data.remote_data_source.model.pet.PetRegisterRequest
+import com.example.mypet.data.remote_data_source.model.pet.PetResponse
+import com.example.mypet.data.remote_data_source.model.pet.PetsResponse
+import com.example.mypet.data.remote_data_source.model.user.UserLoginRequest
+import com.example.mypet.data.remote_data_source.model.user.UserRegisterRequest
+import com.example.mypet.data.remote_data_source.model.user.UserResponse
 import com.example.mypet.domain.Repository
 
 class RepositoryImpl(private val api: PetApi, private val petDao: PetDao): Repository {
 
-    override suspend fun getTemperatureForDay(): TemperatureResponse {
-        return api.getTemperatureForDay()
+    override suspend fun createUser(user: UserRegisterRequest): UserResponse {
+        return api.createUser(user)
     }
 
-    override suspend fun getTemperatureForWeek(): TemperatureResponse {
-        return api.getTemperatureForWeek()
+    override suspend fun createPet(pet: PetRegisterRequest): PetResponse {
+        return api.createPet(pet)
     }
 
-    override suspend fun getTemperatureForMonth(): TemperatureResponse {
-        return api.getTemperatureForMonth()
+    override suspend fun loginUser(user: UserLoginRequest): UserResponse {
+        return api.loginUser(user)
     }
 
-    override suspend fun getPressureForDay(): PressureResponse {
-        return api.getPressureForDay()
+    override suspend fun getParameters(id: Int, period: String): ParametersResponse {
+        return api.getParameters(id, period)
     }
 
-    override suspend fun getPressureForWeek(): PressureResponse {
-        return api.getPressureForWeek()
+    override suspend fun getPets(ownerId: Int): PetsResponse {
+        return api.getPets(ownerId)
     }
 
-    override suspend fun getPressureForMonth(): PressureResponse {
-        return api.getPressureForMonth()
-    }
 
-    override suspend fun getHeartRateForDay(): HeartRateResponse {
-        return api.getHeartRateForDay()
-    }
-
-    override suspend fun getHeartRateForWeek(): HeartRateResponse {
-        return api.getHeartRateForWeek()
-    }
-
-    override suspend fun getHeartRateForMonth(): HeartRateResponse {
-        return api.getHeartRateForMonth()
-    }
-
-    override suspend fun getBreathingRateForDay(): BreathingRateResponse {
-        return api.getBreathingRateForDay()
-    }
-
-    override suspend fun getBreathingRateForWeek(): BreathingRateResponse {
-        return api.getBreathingRateForWeek()
-    }
-
-    override suspend fun getBreathingRateForMonth(): BreathingRateResponse {
-        return api.getBreathingRateForWeek()
-    }
 }
