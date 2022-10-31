@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,8 +8,366 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_marginTop="60dp"
+        android:textSize="22sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/metric_settings"
+        android:textColor="@color/black"/>
 
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="120dp"
+        android:gravity="start"
+        android:text="@string/turn_on_signal"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="343dp"
+        android:layout_marginTop="120dp"
+        android:color="@color/active_button"
+        android:text="" />
+
+    <TextView
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_temperature"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_low_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less1"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="190dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more1"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="190dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_temperature"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_high_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less2"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="250dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more2"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="250dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_pressure"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_low_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less3"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="310dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more3"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="310dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_marginTop="370dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_pressure"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_high_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton7"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="370dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton8"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="370dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_heart_rate"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_low_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less5"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="430dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more5"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="430dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_marginTop="490dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_heart_rate"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/edit_high_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="490dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less6"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="490dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more6"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="490dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="550dp"
+        android:gravity="start"
+        android:text="@string/low_breathing_rate"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/edit_low_breathing_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less7"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="550dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more7"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="550dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="610dp"
+        android:gravity="start"
+        android:text="@string/high_breathing_rate"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/edit_high_breathing_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="610dp"
+        android:layout_marginStart="290dp"
+        android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less8"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="610dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more8"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="610dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 </FrameLayout>

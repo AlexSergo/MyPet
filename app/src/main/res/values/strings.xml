@@ -2,7 +2,6 @@
     <string name="app_name">MyPet</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="authorization">Авторизация</string>
     <string name="email">Почта</string>
     <string name="password">Пароль</string>
@@ -16,6 +15,21 @@
     <string name="delete_account">Удалить аккаунт</string>
     <string name="registration">Регистрация</string>
     <string name="sign_up">Зарегистрироваться</string>
-    <string name="surname">Фамилия</string>
-
+    <string name="temperature">Температура</string>
+    <string name="pressure">Давление</string>
+    <string name="breathing_rate">Частота дыхания</string>
+    <string name="heart_rate">ЧCC</string>
+    <string name="metric_settings">Настройки показателей</string>
+    <string name="day">День</string>
+    <string name="week">Неделя</string>
+    <string name="month">Месяц</string>
+    <string name="turn_on_signal">Включить сигнал при критических показателях</string>
+    <string name="low_temperature">Нижний порог t°</string>
+    <string name="high_temperature">Верхний порог t°</string>
+    <string name="low_pressure">Нижний порог Па</string>
+    <string name="high_pressure">Верхний порог Па</string>
+    <string name="low_heart_rate">Нижний порог уд/мин</string>
+    <string name="high_heart_rate">Верхний порог уд/мин</string>
+    <string name="low_breathing_rate">Нижний порог вд/мин</string>
+    <string name="high_breathing_rate">Верхний порог вд/мин</string>
 </resources>
