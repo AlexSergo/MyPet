@@ -7,12 +7,101 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_marginTop="93dp"
-        android:textSize="28sp"
+        android:layout_marginTop="70dp"
+        android:textSize="24sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/metric_settings"
         android:textColor="@color/black"/>
 
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="130dp"
+        android:gravity="start"
+        android:text="@string/turn_on_signal"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_temperature"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_temperature"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_pressure"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="370dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_pressure"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_heart_rate"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="490dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_heart_rate"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="550dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/low_breathing_rate"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_marginTop="610dp"
+        android:layout_marginStart="43dp"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/high_breathing_rate"
+        android:textColor="@color/black"/>
 </FrameLayout>

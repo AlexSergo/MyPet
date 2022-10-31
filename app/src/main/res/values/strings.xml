@@ -23,4 +23,13 @@
     <string name="day">День</string>
     <string name="week">Неделя</string>
     <string name="month">Месяц</string>
+    <string name="turn_on_signal">Включить сигнал при критических показателях</string>
+    <string name="low_temperature">Нижний порог температуры</string>
+    <string name="high_temperature">Верхний порог температуры</string>
+    <string name="low_pressure">Нижний порог давления</string>
+    <string name="high_pressure">Верхний порог давления</string>
+    <string name="low_heart_rate">Нижний порог чсс</string>
+    <string name="high_heart_rate">Верхний порог чсс</string>
+    <string name="low_breathing_rate">Нижний порог частоты дыхания</string>
+    <string name="high_breathing_rate">Верхний порог частоты дыхания</string>
 </resources>
