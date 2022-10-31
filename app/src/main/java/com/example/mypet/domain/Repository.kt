@@ -1,32 +1,21 @@
 package com.example.mypet.domain
 
-import com.example.mypet.data.remote_data_source.model.BreathingRateResponse
-import com.example.mypet.data.remote_data_source.model.HeartRateResponse
-import com.example.mypet.data.remote_data_source.model.PressureResponse
-import com.example.mypet.data.remote_data_source.model.TemperatureResponse
+import com.example.mypet.data.remote_data_source.model.parameters.ParametersResponse
+import com.example.mypet.data.remote_data_source.model.pet.PetRegisterRequest
+import com.example.mypet.data.remote_data_source.model.pet.PetResponse
+import com.example.mypet.data.remote_data_source.model.pet.PetsResponse
+import com.example.mypet.data.remote_data_source.model.user.UserLoginRequest
+import com.example.mypet.data.remote_data_source.model.user.UserRegisterRequest
+import com.example.mypet.data.remote_data_source.model.user.UserResponse
 
 interface Repository {
-    suspend fun getTemperatureForDay(): TemperatureResponse
+    suspend fun createUser(user: UserRegisterRequest): UserResponse
 
-    suspend fun getTemperatureForWeek(): TemperatureResponse
+    suspend fun createPet(pet: PetRegisterRequest): PetResponse
 
-    suspend fun getTemperatureForMonth(): TemperatureResponse
+    suspend fun loginUser(user: UserLoginRequest): UserResponse
 
-    suspend fun getPressureForDay(): PressureResponse
+    suspend fun getParameters(id: Int, period: String): ParametersResponse
 
-    suspend fun getPressureForWeek(): PressureResponse
-
-    suspend fun getPressureForMonth(): PressureResponse
-
-    suspend fun getHeartRateForDay(): HeartRateResponse
-
-    suspend fun getHeartRateForWeek(): HeartRateResponse
-
-    suspend fun getHeartRateForMonth(): HeartRateResponse
-
-    suspend fun getBreathingRateForDay(): BreathingRateResponse
-
-    suspend fun getBreathingRateForWeek(): BreathingRateResponse
-
-    suspend fun getBreathingRateForMonth(): BreathingRateResponse
+    suspend fun getPets(ownerId: Int): PetsResponse
 }

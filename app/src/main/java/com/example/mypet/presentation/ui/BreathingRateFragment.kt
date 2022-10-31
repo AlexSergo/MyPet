@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mypet.databinding.FragmentBreathingRateBinding
+import com.example.mypet.domain.Repository
 
 class BreathingRateFragment : Fragment() {
 
     private lateinit var binding: FragmentBreathingRateBinding
+    private lateinit var repository: Repository
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -17,6 +19,12 @@ class BreathingRateFragment : Fragment() {
     ): View? {
         binding = FragmentBreathingRateBinding.inflate(layoutInflater)
         return binding.root
+    }
+
+    companion object{
+        fun newInstance(repository: Repository) = BreathingRateFragment().apply {
+            this.repository = repository
+        }
     }
 
 }
