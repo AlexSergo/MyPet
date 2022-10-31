@@ -50,8 +50,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="190dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less1"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="190dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more1"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="190dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 
     <TextView
         android:layout_marginTop="250dp"
@@ -68,8 +92,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less2"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="250dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more2"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="250dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 
     <TextView
         android:layout_marginTop="310dp"
@@ -86,8 +134,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="310dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less3"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="310dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more3"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="310dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 
     <TextView
         android:layout_marginTop="370dp"
@@ -104,8 +176,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="370dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton7"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="370dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton8"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="370dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 
     <TextView
         android:layout_marginTop="430dp"
@@ -122,8 +218,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="430dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less5"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="430dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more5"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="430dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 
     <TextView
         android:layout_marginTop="490dp"
@@ -140,11 +260,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="490dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less6"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="490dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more6"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="490dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
     <TextView
-        android:layout_width="280dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
         android:layout_marginTop="550dp"
@@ -158,11 +302,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="550dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less7"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="550dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more7"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="550dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
     <TextView
-        android:layout_width="280dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="43dp"
         android:layout_marginTop="610dp"
@@ -176,6 +344,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="610dp"
-        android:layout_marginStart="343dp"
+        android:layout_marginStart="290dp"
         android:inputType="number"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_less8"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="610dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/less"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_more8"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="610dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:src="@drawable/more"
+        app:backgroundTint="#00FFFFFF"
+        app:elevation="0dp" />
 </FrameLayout>
