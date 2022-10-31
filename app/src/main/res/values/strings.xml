@@ -2,26 +2,25 @@
     <string name="app_name">MyPet</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="authorization">Авторизация</string>
     <string name="email">Почта</string>
     <string name="password">Пароль</string>
     <string name="repeat_password">Повторите пароль</string>
     <string name="sign_in">Войти</string>
     <string name="phone">Телефон</string>
-<<<<<<< HEAD
-=======
     <string name="name">Имя</string>
->>>>>>> 577f40e07b236af71793bf6f53324ba057fa3cf2
     <string name="change_data">Изменить данные</string>
     <string name="edit">Редактировать</string>
     <string name="exit">Выход</string>
     <string name="delete_account">Удалить аккаунт</string>
-<<<<<<< HEAD
-=======
     <string name="registration">Регистрация</string>
     <string name="sign_up">Зарегистрироваться</string>
-    <string name="surname">Фамилия</string>
-
->>>>>>> 577f40e07b236af71793bf6f53324ba057fa3cf2
+    <string name="temperature">Температура</string>
+    <string name="pressure">Давление</string>
+    <string name="breathing_rate">Частота дыхания</string>
+    <string name="heart_rate">ЧCC</string>
+    <string name="metric_settings">Настройки показателей</string>
+    <string name="day">День</string>
+    <string name="week">Неделя</string>
+    <string name="month">Месяц</string>
 </resources>
