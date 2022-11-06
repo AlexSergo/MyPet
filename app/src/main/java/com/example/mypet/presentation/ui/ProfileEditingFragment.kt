@@ -18,6 +18,14 @@ class ProfileEditingFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentProfileEditingBinding.inflate(layoutInflater)
+
+        binding.buttonChangeData.setOnClickListener {
+            // TODO: здесь нужно проверить введенные данные
+
+            val callback = requireActivity() as MainActivityCallback
+            callback.showFragment(ProfileFragment())
+        }
+
         return binding.root
     }
 }

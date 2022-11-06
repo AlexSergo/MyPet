@@ -17,6 +17,15 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentProfileBinding.inflate(layoutInflater)
+
+        val callback = requireActivity() as MainActivityCallback
+        binding.edit.setOnClickListener {
+            callback.showProfileEditingFragment()
+        }
+        binding.exit.setOnClickListener {
+            callback.exit()
+        }
+
         return binding.root
     }
 }

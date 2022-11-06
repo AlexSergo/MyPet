@@ -3,9 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/debug/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/debug/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.164" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/activity_start.xml" value="0.2" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_breathing_rate.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_choose_graphic.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_custom_indicators.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_first.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_heart_rate.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_mare_data.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_pressure.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_profile.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_profile_editing.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_settings.xml" value="0.2223731884057971" />
         <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_sign_in.xml" value="0.3625" />
-        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_sign_up.xml" value="0.3625" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_sign_up.xml" value="0.2" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/fragment_temperature.xml" value="0.2223731884057971" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/layout/graph_item.xml" value="0.20512820512820512" />
+        <entry key="..\:/Users/Alexandr/Desktop/projects/PD/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2453125" />
       </map>
     </option>
   </component>

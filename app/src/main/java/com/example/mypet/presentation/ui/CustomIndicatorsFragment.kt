@@ -18,6 +18,11 @@ class CustomIndicatorsFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         binding = FragmentCustomIndicatorsBinding.inflate(layoutInflater)
+
+        binding.buttonMoreData.setOnClickListener {
+            val callback = requireActivity() as MainActivityCallback
+            callback.showMoreData()
+        }
         return binding.root
     }
 }

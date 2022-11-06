@@ -17,7 +17,17 @@ class SignInFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+        val callback = requireActivity() as RegisterActivityCallback
         binding = FragmentSignInBinding.inflate(layoutInflater)
+
+        binding.register.setOnClickListener {
+            callback.showSignUpFragment()
+        }
+
+        binding.buttonSignIn.setOnClickListener {
+            callback.showProfile()
+        }
+
         return binding.root
     }
 }
