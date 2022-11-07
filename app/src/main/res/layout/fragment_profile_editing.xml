@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,41 +16,46 @@
         android:elevation="0dp"
         android:src="@drawable/ic_btn_previous"
         app:borderWidth="0dp"
-        app:elevation="0dp" />
+        app:elevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="150dp"
-        tools:src="@drawable/img" />
+        tools:src="@drawable/img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_previous"/>
+
 
     <TextView
         android:id="@+id/name_of_user"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:layout_marginTop="173dp"
-        android:text="@string/name" />
+        android:text="@string/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar"/>
 
     <TextView
         android:id="@+id/email_of_user"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="203dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="@string/email" />
+        android:text="@string/email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_of_user"/>
 
     <EditText
         android:id="@+id/name_field"
         android:inputType="text"
-        android:layout_marginTop="377dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="19dp"
         android:layout_marginRight="19dp"
         android:textSize="18sp"
@@ -59,12 +64,15 @@
         android:hint="@string/name"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_of_user"/>
 
     <EditText
-        android:id="@+id/phone_field"
-        android:inputType="phone"
-        android:layout_marginTop="439dp"
+        android:id="@+id/password_field"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="19dp"
         android:layout_marginRight="19dp"
         android:textSize="18sp"
@@ -73,12 +81,15 @@
         android:hint="@string/password"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_field"/>
 
     <EditText
         android:id="@+id/repeat_password_field"
         android:inputType="textPassword"
-        android:layout_marginTop="501dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="19dp"
         android:layout_marginRight="19dp"
         android:textSize="18sp"
@@ -87,16 +98,21 @@
         android:hint="@string/repeat_password"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_field"/>
 
     <Button
         android:id="@+id/button_change_data"
-        android:layout_width="210dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginTop="569dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/inactive_button"
         android:text="@string/change_data"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeat_password_field"/>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
