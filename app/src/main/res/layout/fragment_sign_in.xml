@@ -56,16 +56,15 @@
 
     <Button
         android:id="@+id/button_sign_in"
-        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/inactive_button"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@drawable/my_button"
         android:text="@string/sign_in"
         android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_field"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/password_field" />
 
     <View
         android:id="@+id/view2"
