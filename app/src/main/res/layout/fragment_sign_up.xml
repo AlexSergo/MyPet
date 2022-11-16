@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,130 +8,128 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_marginTop="93dp"
-        android:textSize="28sp"
-        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/registration"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.118"/>
 
     <EditText
         android:id="@+id/email_field"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="253dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
 
     <EditText
         android:id="@+id/name_field"
         android:inputType="text"
-        android:layout_marginTop="315dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_margin="30dp"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/name"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_field"/>
 
     <EditText
         android:id="@+id/surname_field"
         android:inputType="text"
-        android:layout_marginTop="377dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_margin="30dp"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/surname"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_field"/>
 
     <EditText
         android:id="@+id/phone_field"
         android:inputType="phone"
-        android:layout_marginTop="439dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_margin="30dp"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/phone"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surname_field"/>
 
     <EditText
         android:id="@+id/password_field"
         android:inputType="textPassword"
-        android:layout_marginTop="501dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_margin="30dp"
         android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:text=""
         android:textColor="@color/black"
-        android:textColorHint="@color/color_hint"/>
+        android:textColorHint="@color/color_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_field"/>
 
     <Button
         android:id="@+id/button_sign_up"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginTop="569dp"
-        android:backgroundTint="@color/inactive_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@drawable/my_button"
         android:text="@string/sign_up"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_field"
+        app:layout_constraintBottom_toTopOf="@+id/view3"/>
 
     <View
+        android:id="@+id/view3"
         android:layout_width="match_parent"
-        android:layout_marginTop="634dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginRight="23dp"
+        android:layout_height="1sp"
         android:background="@color/color_hint"
-        android:layout_height="1sp"/>
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"/>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="651dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginRight="23dp"
-        android:text="Нажимая кнопку «Зарегистрироваться», я подтверждаю свою дееспособность, согласие на получение информации об оформлении, согласие на обработку персональных данных в соответствии с указанным "
+        android:text="Нажимая кнопку «Зарегистрироваться», я подтверждаю свою дееспособность, согласие на получение информации об оформлении, согласие на обработку персональных данных в соответствии с указанным здесь текстом"
         android:textColor="@color/black"
-        android:textSize="12sp"/>
+        android:textSize="12sp"
+        android:layout_marginBottom="40dp"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <TextView
-        android:id="@+id/here"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="179dp"
-        android:layout_marginTop="695dp"
-        android:text="здесь"
-        android:textColor="@color/active_button"
-        android:textSize="12sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="695dp"
-        android:layout_marginLeft="216dp"
-        android:layout_marginRight="23dp"
-        android:text="текстом"
-        android:textColor="@color/black"
-        android:textSize="12sp"/>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@
     <string name="sign_in">Войти</string>
     <string name="phone">Телефон</string>
     <string name="name">Имя</string>
-    <string name="surname">Имя</string>
+    <string name="surname">Фамилия</string>
     <string name="change_data">Изменить данные</string>
     <string name="edit">Редактировать</string>
     <string name="exit">Выход</string>
@@ -24,7 +24,8 @@
     <string name="day">День</string>
     <string name="week">Неделя</string>
     <string name="month">Месяц</string>
-    <string name="turn_on_signal">Включить сигнал при критических показателях</string>
+    <string name="turn_on_signal">Сигнал при критических\
+        показателях</string>
     <string name="low_temperature">Нижний порог t°</string>
     <string name="high_temperature">Верхний порог t°</string>
     <string name="low_pressure">Нижний порог Па</string>

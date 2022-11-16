@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:drawable="@color/active_button"
+        android:color="@color/active_button"
+        android:background="@color/active_button"
+        android:backgroundTint="@color/active_button"/>
+    <item
+        android:state_enabled="false"
+        android:drawable="@color/inactive_button"
+        android:color="@color/inactive_button"
+        android:backgroundTint="@color/inactive_button"
+        android:background="@color/inactive_button"/>
+</selector>
