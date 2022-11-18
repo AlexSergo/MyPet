@@ -9,8 +9,8 @@ class GetPetsUseCase(private val repository: Repository) {
         val pets = repository.getPets(ownerId)
         val result = mutableListOf<Pet>()
 
-        for (pet in pets.pets){
-            result.add(Pet(id = pet.id, name = pet.name, age = pet.age, ownerId = pet.ownerId))
+        for (pet in pets){
+            result.add(Pet(id = pet.id, name = pet.name, age = pet.age, ownerId = pet.clientId))
         }
         return result
     }

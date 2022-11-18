@@ -13,9 +13,9 @@ interface Repository {
 
     suspend fun createPet(pet: PetRegisterRequest): PetResponse
 
-    suspend fun loginUser(user: UserLoginRequest): UserResponse
+    suspend fun loginUser(username: String, password: String): UserResponse
 
     suspend fun getParameters(id: Int, period: String): ParametersResponse
 
-    suspend fun getPets(ownerId: Int): PetsResponse
+    suspend fun getPets(ownerId: Int): List<PetResponse>
 }

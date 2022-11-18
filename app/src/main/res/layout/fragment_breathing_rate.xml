@@ -8,17 +8,6 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_previous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:elevation="0dp"
-        android:src="@drawable/ic_btn_previous"
-        app:borderWidth="0dp"
-        app:elevation="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/header"
@@ -30,7 +19,18 @@
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_previous"/>
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
 
     <Button
         android:id="@+id/button"
@@ -38,22 +38,15 @@
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:text="@string/day"
-        android:textColor="@color/black"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button2"
-        app:layout_constraintBottom_toBottomOf="@+id/button2" />
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:background="#00FFFFFF"
         android:text="@string/week"
-        android:textColor="@color/black"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/button3"
@@ -61,10 +54,8 @@
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:text="@string/month"
-        android:textColor="@color/black"
-        app:layout_constraintLeft_toRightOf="@+id/button2"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"/>
+        android:textColor="@color/black" />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less"
@@ -76,7 +67,7 @@
         app:backgroundTint="#00FFFFFF"
         app:elevation="0dp"
         app:layout_constraintRight_toLeftOf="@+id/day_month_year"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
 
     <TextView
         android:id="@+id/day_month_year"

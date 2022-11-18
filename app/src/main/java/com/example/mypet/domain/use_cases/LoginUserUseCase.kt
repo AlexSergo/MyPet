@@ -8,7 +8,7 @@ import com.example.mypet.domain.model.user.UserLogin
 class LoginUserUseCase(private val repository: Repository) {
 
     suspend fun execute(user: UserLogin): User {
-        val userResponse = repository.loginUser(UserLoginRequest(user.email, user.password))
-        return User(userResponse.id, userResponse.email)
+        val userResponse = repository.loginUser(user.email, user.password)
+        return User(userResponse.id, userResponse.email, userResponse.name)
     }
 }

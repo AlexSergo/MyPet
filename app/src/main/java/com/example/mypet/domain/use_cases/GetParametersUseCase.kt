@@ -8,6 +8,7 @@ class GetParametersUseCase(private val repository: Repository) {
 
     suspend fun execute(petId: Int, period: Period): List<Parameters>{
         val params = when(period) {
+                Period.HOUR -> repository.getParameters(petId, "hour")
                 Period.DAY -> repository.getParameters(petId, "day")
                 Period.WEEK -> repository.getParameters(petId, "week")
                 Period.MONTH -> repository.getParameters(petId, "month")
