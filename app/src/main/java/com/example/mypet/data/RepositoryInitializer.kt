@@ -23,7 +23,7 @@ object RepositoryInitializer {
 
             val retrofit = Retrofit.Builder()
                 .client(client)
-                .baseUrl("---")
+                .baseUrl("http://quixotic-001-site1.gtempurl.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
@@ -33,7 +33,7 @@ object RepositoryInitializer {
          //   dao = PizzaDatabase.getInstance(context)?.dao()
         }
         if (api != null)
-            repository = RepositoryImpl(api!!, dao!!)
+            repository = RepositoryImpl(api!!)
         return repository
     }
 }

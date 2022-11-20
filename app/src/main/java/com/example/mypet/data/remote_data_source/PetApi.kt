@@ -11,18 +11,18 @@ import retrofit2.http.*
 
 interface PetApi {
 
-    @POST("/api/clients")
+    @POST("/api/Clients")
     suspend fun createUser(@Body user: UserRegisterRequest): UserResponse
 
     @POST("/api/{owner_id}/pets")
     suspend fun createPet(@Body pet: PetRegisterRequest): PetResponse
 
-    @POST("/api/clients")
-    suspend fun loginUser(@Body user: UserLoginRequest): UserResponse
+    @GET("/api/Clients/login/{username}/{password}")
+    suspend fun loginUser(@Path("username") username: String, @Path("password") password: String): UserResponse
 
     @GET("/api/parameters/{pet_id}/{period}")
     suspend fun getParameters(@Path("pet_id") id: Int, @Path("period") period: String): ParametersResponse
 
     @GET("/api/clients/{owner_id}/pets")
-    suspend fun getPets(@Path("owner_id") ownerId: Int): PetsResponse
+    suspend fun getPets(@Path("owner_id") ownerId: Int): List<PetResponse>
 }

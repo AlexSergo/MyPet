@@ -2,5 +2,6 @@ package com.example.mypet.domain.model.user
 
 data class User(
     val id: Int,
-    val email: String
+    val email: String,
+    val name: String
 )

@@ -25,7 +25,7 @@ class GraphAdapter: RecyclerView.Adapter<GraphAdapter.GraphViewHolder>() {
 
     override fun onBindViewHolder(holder: GraphViewHolder, position: Int) {
         graphs.getOrNull(position)?.let { graph->
-            holder.init()
+            holder.init(graph)
         }
     }
 
@@ -34,7 +34,8 @@ class GraphAdapter: RecyclerView.Adapter<GraphAdapter.GraphViewHolder>() {
     }
 
     class GraphViewHolder(private val binding: GraphItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun init(){
+        fun init(graph: Graph){
+            binding.name.text = graph.name
             val series = LineGraphSeries<DataPoint>()
             series.appendData(DataPoint(0.0,0.0), true, 10)
             series.appendData(DataPoint(1.0,1.0), true, 10)

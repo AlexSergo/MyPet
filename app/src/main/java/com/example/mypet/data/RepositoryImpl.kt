@@ -11,7 +11,7 @@ import com.example.mypet.data.remote_data_source.model.user.UserRegisterRequest
 import com.example.mypet.data.remote_data_source.model.user.UserResponse
 import com.example.mypet.domain.Repository
 
-class RepositoryImpl(private val api: PetApi, private val petDao: PetDao): Repository {
+class RepositoryImpl(private val api: PetApi): Repository {
 
     override suspend fun createUser(user: UserRegisterRequest): UserResponse {
         return api.createUser(user)
@@ -21,15 +21,15 @@ class RepositoryImpl(private val api: PetApi, private val petDao: PetDao): Repos
         return api.createPet(pet)
     }
 
-    override suspend fun loginUser(user: UserLoginRequest): UserResponse {
-        return api.loginUser(user)
+    override suspend fun loginUser(username: String, password: String): UserResponse {
+        return api.loginUser(username, password)
     }
 
     override suspend fun getParameters(id: Int, period: String): ParametersResponse {
         return api.getParameters(id, period)
     }
 
-    override suspend fun getPets(ownerId: Int): PetsResponse {
+    override suspend fun getPets(ownerId: Int): List<PetResponse> {
         return api.getPets(ownerId)
     }
 

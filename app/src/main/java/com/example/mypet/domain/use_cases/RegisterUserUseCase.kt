@@ -12,9 +12,9 @@ class RegisterUserUseCase(private val repository: Repository) {
             UserRegisterRequest(
                 username = user.username,
                 email = user.email,
-                phone = user.phone,
-                password = user.password))
+                password = user.password,
+                name = user.name))
 
-        return User(response.id, response.email)
+        return User(response.id, response.email, response.name)
     }
 }

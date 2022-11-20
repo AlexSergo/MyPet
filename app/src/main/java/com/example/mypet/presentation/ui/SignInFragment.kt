@@ -10,43 +10,53 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.example.mypet.data.RepositoryInitializer
 import com.example.mypet.databinding.FragmentSignInBinding
+import com.example.mypet.domain.model.user.User
+import com.example.mypet.domain.model.user.UserLogin
+import com.example.mypet.presentation.view_model.PetViewModel
+import com.example.mypet.presentation.view_model.ViewModelFactory
 
 class SignInFragment : Fragment() {
 
     private lateinit var binding: FragmentSignInBinding
-    var count = 0
-    private val textWatcher = object : TextWatcher {
-        override fun afterTextChanged(s: Editable?) { count++ }
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-    }
-    private val textWatcher2 = object : TextWatcher {
-        override fun afterTextChanged(s: Editable?) {
-            if (count == 1) {
-                binding.buttonSignIn.isEnabled = true
-            }
-        }
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-    }
+
+    private lateinit var viewModelFactory: ViewModelFactory
+    private lateinit var viewModel: PetViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         val callback = requireActivity() as RegisterActivityCallback
         binding = FragmentSignInBinding.inflate(layoutInflater)
-        binding.buttonSignIn.isEnabled = false
-        binding.emailField.addTextChangedListener(textWatcher)
-        binding.passwordField.addTextChangedListener(textWatcher2)
+
+        viewModelInit()
+
+        binding.buttonSignIn.isEnabled = true
         binding.register.setOnClickListener {
             callback.showSignUpFragment()
         }
 
         binding.buttonSignIn.setOnClickListener {
-            callback.showProfile()
+            viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
+                password = binding.passwordField.text.toString()))
+
+            viewModel.getUserLiveData().observe(requireActivity(), Observer{
+                it?.let {
+                    callback.showProfile(it)
+                }
+            })
         }
         return binding.root
+    }
+
+    private fun viewModelInit(){
+        viewModelFactory = ViewModelFactory(RepositoryInitializer.getRepository(requireContext()))
+        viewModel = ViewModelProvider(this, viewModelFactory)
+            .get(PetViewModel::class.java)
     }
 
 }

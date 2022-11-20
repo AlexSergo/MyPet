@@ -12,7 +12,7 @@ class RegisterPetUseCase(private val repository: Repository) {
 
         return Pet(
             id = response.id,
-            ownerId = response.ownerId,
+            ownerId = response.clientId,
             name = response.name,
             age = response.age)
     }

@@ -10,10 +10,11 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.mypet.R
 import com.example.mypet.databinding.ActivityStartBinding
+import com.example.mypet.domain.model.user.User
 
 interface RegisterActivityCallback{
     fun showSignUpFragment()
-    fun showProfile()
+    fun showProfile(user: User)
 }
 
 class StartActivity : AppCompatActivity(), RegisterActivityCallback {
@@ -33,10 +34,11 @@ class StartActivity : AppCompatActivity(), RegisterActivityCallback {
             .commit()
     }
 
-    override fun showProfile() {
+    override fun showProfile(user: User) {
         val intent = Intent(this, MainActivity::class.java)
-        val clientId = 1
-        intent.putExtra("clientId", clientId)
+        intent.putExtra("clientId", user.id)
+        intent.putExtra("clientName", user.name)
+        intent.putExtra("clientEmail", user.email)
         startActivity(intent)
         finish()
     }
