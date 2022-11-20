@@ -34,6 +34,9 @@
     <string name="high_heart_rate">Верхний порог уд/мин</string>
     <string name="low_breathing_rate">Нижний порог вд/мин</string>
     <string name="high_breathing_rate">Верхний порог вд/мин</string>
+    <string name="profile">профиль</string>
+    <string name="indicators">показатели</string>
+    <string name="settings">настройки</string>
     <string name="title_activity_start">StartActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

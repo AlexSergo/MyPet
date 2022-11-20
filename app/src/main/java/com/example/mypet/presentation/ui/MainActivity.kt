@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), MainActivityCallback {
         val clientId = intent.getIntExtra("clientId", -1)
 
         binding.bottomNavigation.setOnItemSelectedListener {
-
+            binding.bottomNavigation.itemIconTintList = null
             when(it.itemId){
                 R.id.profile -> showFragment(ProfileFragment())
                 R.id.indicators -> showFragment(CustomIndicatorsFragment())
