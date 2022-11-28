@@ -15,7 +15,6 @@ class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
     private lateinit var sPref : SharedPreferences
-    private lateinit var sPref2 : SharedPreferences
     var low_temp : Int = 0
     var high_temp : Int = 0
     val SAVED_TEXT : String = "saved_text"
@@ -48,9 +47,8 @@ class SettingsFragment : Fragment() {
 
     private fun saveText() {
         sPref = requireActivity().getSharedPreferences("MyPref", MODE_PRIVATE)
-        sPref2 = requireActivity().getSharedPreferences("high_temp", MODE_PRIVATE)
         val ed = sPref.edit()
-        val ed2 = sPref2.edit()
+        val ed2 = sPref.edit()
         ed.putString(SAVED_TEXT, binding.editLowTemp.text.toString())
         ed2.putString(SAVED_HIGH_TEMP, binding.editHighTemp.text.toString())
         ed.apply()
