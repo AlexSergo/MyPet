@@ -41,14 +41,16 @@ class SignInFragment : Fragment() {
         }
 
         binding.buttonSignIn.setOnClickListener {
-            viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
-                password = binding.passwordField.text.toString()))
+//            viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
+//                password = binding.passwordField.text.toString()))
 
-            viewModel.getUserLiveData().observe(requireActivity(), Observer{
-                it?.let {
-                    callback.showProfile(it)
-                }
-            })
+            callback.showProfile(User(id = 1, name = "Sasha", email = "sasha@mail.ru"))
+
+//            viewModel.getUserLiveData().observe(requireActivity(), Observer{
+//                it?.let {
+//                    callback.showProfile(it)
+//                }
+//            })
         }
         return binding.root
     }

@@ -58,11 +58,11 @@
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
         app:layout_constraintTop_toBottomOf="@+id/turn_on"/>
 
-    <EditText
+    <TextView
         android:id="@+id/edit_low_temp"
+        android:text="@{low_temp}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         app:layout_constraintRight_toLeftOf="@+id/btn_less1"
         app:layout_constraintBottom_toBottomOf="@+id/low_temp"/>
 
@@ -102,11 +102,11 @@
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
         app:layout_constraintTop_toBottomOf="@+id/low_temp" />
 
-    <EditText
+    <TextView
         android:id="@+id/edit_high_temp"
+        android:text="@{high_temp}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         app:layout_constraintRight_toLeftOf="@+id/btn_less1"
         app:layout_constraintBottom_toBottomOf="@+id/high_temp"/>
 
