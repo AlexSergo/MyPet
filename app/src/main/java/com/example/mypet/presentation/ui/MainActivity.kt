@@ -44,11 +44,11 @@ class MainActivity : AppCompatActivity(), MainActivityCallback {
             email = intent.getStringExtra("clientEmail")!!)
 
         //    viewModel.getPets(user.id)
-        viewModel.getPetsLiveData().observe(this, Observer {
+     /*   viewModel.getPetsLiveData().observe(this, Observer {
             it?.let {
                 pets = it
             }
-        })
+        })*/
 
         binding.bottomNavigation.setOnItemSelectedListener {
             binding.bottomNavigation.itemIconTintList = null

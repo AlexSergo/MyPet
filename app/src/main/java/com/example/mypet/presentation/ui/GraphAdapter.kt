@@ -36,11 +36,10 @@ class GraphAdapter: RecyclerView.Adapter<GraphAdapter.GraphViewHolder>() {
     class GraphViewHolder(private val binding: GraphItemBinding): RecyclerView.ViewHolder(binding.root){
         fun init(graph: Graph){
             binding.name.text = graph.name
-            val series = LineGraphSeries<DataPoint>()
-            series.appendData(DataPoint(0.0,0.0), true, 10)
-            series.appendData(DataPoint(1.0,1.0), true, 10)
-            series.appendData(DataPoint(3.0,2.0), true, 10)
-            series.appendData(DataPoint(4.0,5.0), true, 10)
+            val dataPointArray = arrayOfNulls<DataPoint>(graph.x.size)
+            for (i in 0 until graph.x.count())
+                dataPointArray[i] = DataPoint(graph.x[i].toDouble(),graph.y[i].toDouble())
+            val series = LineGraphSeries(dataPointArray)
             binding.chart.addSeries(series)
             series.color = Color.GREEN
         }

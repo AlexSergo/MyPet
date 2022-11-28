@@ -10,10 +10,17 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mypet.data.RepositoryInitializer
 import com.example.mypet.databinding.FragmentMoreDataBinding
 import com.example.mypet.domain.Period
+import com.example.mypet.domain.model.parameters.*
 import com.example.mypet.presentation.view_model.PetViewModel
 import com.example.mypet.presentation.view_model.ViewModelFactory
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.ZoneOffset.UTC
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class MoreDataFragment : Fragment() {
 
@@ -65,18 +72,55 @@ class MoreDataFragment : Fragment() {
     private fun getParametersForPeriod(): MutableMap<String, Graph>{
         val graphMap = mutableMapOf<String, Graph>()
         val callback = requireActivity() as MainActivityCallback
-        val pets = callback.getPets()
-        if (pets.isNotEmpty()) {
-            viewModel.getParameters(pets[0].id, Period.HOUR)
-            viewModel.getParametersLiveData().observe(requireActivity(), Observer{
-                it?.let {
+    //    val pets = callback.getPets()
+       // if (pets.isNotEmpty()) {
+
+            val parameters = mutableListOf<Parameters>()
+            parameters.add(Parameters(
+                breathingRate = BreathingRate(50),
+                heartRate = HeartRate(30),
+                temperature = Temperature(38.7f),
+                date = "0",
+                pressure = Pressure(topPressure = 110, lowerPressure = 90)
+            ))
+            parameters.add(Parameters(
+                breathingRate = BreathingRate(60),
+                heartRate = HeartRate(25),
+                temperature = Temperature(37.9f),
+                date = "1",
+                pressure = Pressure(topPressure = 105, lowerPressure = 93)
+            ))
+            parameters.add(Parameters(
+                breathingRate = BreathingRate(55),
+                heartRate = HeartRate(35),
+                temperature = Temperature(38.0f),
+                date = "2",
+                pressure = Pressure(topPressure = 109, lowerPressure = 85)
+            ))
+            parameters.add(Parameters(
+                breathingRate = BreathingRate(53),
+                heartRate = HeartRate(39),
+                temperature = Temperature(37.5f),
+                date = "3",
+                pressure = Pressure(topPressure = 112, lowerPressure = 91)
+            ))
+        parameters.add(Parameters(
+            breathingRate = BreathingRate(53),
+            heartRate = HeartRate(39),
+            temperature = Temperature(37.0f),
+            date = "4",
+            pressure = Pressure(topPressure = 112, lowerPressure = 91)
+        ))
+         //   viewModel.getParameters(pets[0].id, Period.HOUR)
+        //    viewModel.getParametersLiveData().observe(requireActivity(), Observer{
+               // it?.let {
                     val tempValue = mutableListOf<Float>()
                     val breathingRateValue = mutableListOf<Float>()
                     val heartRateValue = mutableListOf<Float>()
                     val topPressureValue = mutableListOf<Float>()
                     val lowPressureValue = mutableListOf<Float>()
                     val period = mutableListOf<String>()
-                    for (params in it) {
+                    for (params in parameters) {
                         tempValue.add(params.temperature.temperature)
                         heartRateValue.add(params.heartRate.heartRate.toFloat())
                         topPressureValue.add(params.pressure.topPressure.toFloat())
@@ -89,9 +133,9 @@ class MoreDataFragment : Fragment() {
                         Graph("Частота дыхания", period, breathingRateValue)
                     graphMap["ЧСС"] = Graph("ЧСС", period, heartRateValue)
                     graphMap["Давление"] = Graph("Давление", period, topPressureValue)
-                }
-            })
-        }
+                //}
+            //})
+      //  }
         return graphMap
     }
 }
