@@ -41,6 +41,7 @@ class SignInFragment : Fragment() {
         }
 
         binding.buttonSignIn.setOnClickListener {
+<<<<<<< HEAD
 //            viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
 //                password = binding.passwordField.text.toString()))
 
@@ -51,6 +52,18 @@ class SignInFragment : Fragment() {
 //                    callback.showProfile(it)
 //                }
 //            })
+=======
+          /*  viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
+                password = binding.passwordField.text.toString()))*/
+
+            callback.showProfile(User(id = 1, name = "Sasha", email = "sasha@mail.ru"))
+
+        /*    viewModel.getUserLiveData().observe(requireActivity(), Observer{
+                it?.let {
+                    callback.showProfile(it)
+                }
+            })*/
+>>>>>>> 9b7a612c594ac85d7ca2c73efdde4e711cf7646f
         }
         return binding.root
     }
