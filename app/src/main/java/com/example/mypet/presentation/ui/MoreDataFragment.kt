@@ -72,8 +72,8 @@ class MoreDataFragment : Fragment() {
     private fun getParametersForPeriod(): MutableMap<String, Graph>{
         val graphMap = mutableMapOf<String, Graph>()
         val callback = requireActivity() as MainActivityCallback
-    //    val pets = callback.getPets()
-       // if (pets.isNotEmpty()) {
+        val pets = callback.getPets()
+        if (pets.isNotEmpty()) {
 
             val parameters = mutableListOf<Parameters>()
             parameters.add(Parameters(
@@ -111,9 +111,9 @@ class MoreDataFragment : Fragment() {
             date = "4",
             pressure = Pressure(topPressure = 112, lowerPressure = 91)
         ))
-         //   viewModel.getParameters(pets[0].id, Period.HOUR)
-        //    viewModel.getParametersLiveData().observe(requireActivity(), Observer{
-               // it?.let {
+            viewModel.getParameters(pets[0].id, Period.HOUR)
+            viewModel.getParametersLiveData().observe(requireActivity(), Observer{
+                it?.let {
                     val tempValue = mutableListOf<Float>()
                     val breathingRateValue = mutableListOf<Float>()
                     val heartRateValue = mutableListOf<Float>()
@@ -133,9 +133,9 @@ class MoreDataFragment : Fragment() {
                         Graph("Частота дыхания", period, breathingRateValue)
                     graphMap["ЧСС"] = Graph("ЧСС", period, heartRateValue)
                     graphMap["Давление"] = Graph("Давление", period, topPressureValue)
-                //}
-            //})
-      //  }
+                }
+            })
+        }
         return graphMap
     }
 }

@@ -62,18 +62,18 @@ class SignUpFragment : Fragment() {
         viewModelInit()
 
         binding.buttonSignUp.setOnClickListener {
-//            viewModel.createUser(
-//                UserRegister(username = binding.emailField.text.toString(),
-//                    email = binding.emailField.text.toString(),
-//                    phone = binding.phoneField.text.toString(),
-//                    password = binding.passwordField.text.toString(),
-//                    name = binding.nameField.text.toString()))
-////            viewModel.getUserLiveData().observe(requireActivity(), Observer{
-////                it?.let {
-////                    val callback = requireActivity() as RegisterActivityCallback
-////                    callback.showProfile(it)
-////                }
-////            })
+            viewModel.createUser(
+                UserRegister(username = binding.emailField.text.toString(),
+                   email = binding.emailField.text.toString(),
+                    phone = binding.phoneField.text.toString(),
+                    password = binding.passwordField.text.toString(),
+                    name = binding.nameField.text.toString()))
+            viewModel.getUserLiveData().observe(requireActivity(), Observer{
+                it?.let {
+                   val callback = requireActivity() as RegisterActivityCallback
+                    callback.showProfile(it)
+                }
+            })
         }
 
         return binding.root
