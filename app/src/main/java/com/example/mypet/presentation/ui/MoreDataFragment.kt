@@ -74,44 +74,7 @@ class MoreDataFragment : Fragment() {
         val callback = requireActivity() as MainActivityCallback
         val pets = callback.getPets()
         if (pets.isNotEmpty()) {
-
-            val parameters = mutableListOf<Parameters>()
-            parameters.add(Parameters(
-                breathingRate = BreathingRate(50),
-                heartRate = HeartRate(30),
-                temperature = Temperature(38.7f),
-                date = "0",
-                pressure = Pressure(topPressure = 110, lowerPressure = 90)
-            ))
-            parameters.add(Parameters(
-                breathingRate = BreathingRate(60),
-                heartRate = HeartRate(25),
-                temperature = Temperature(37.9f),
-                date = "1",
-                pressure = Pressure(topPressure = 105, lowerPressure = 93)
-            ))
-            parameters.add(Parameters(
-                breathingRate = BreathingRate(55),
-                heartRate = HeartRate(35),
-                temperature = Temperature(38.0f),
-                date = "2",
-                pressure = Pressure(topPressure = 109, lowerPressure = 85)
-            ))
-            parameters.add(Parameters(
-                breathingRate = BreathingRate(53),
-                heartRate = HeartRate(39),
-                temperature = Temperature(37.5f),
-                date = "3",
-                pressure = Pressure(topPressure = 112, lowerPressure = 91)
-            ))
-        parameters.add(Parameters(
-            breathingRate = BreathingRate(53),
-            heartRate = HeartRate(39),
-            temperature = Temperature(37.0f),
-            date = "4",
-            pressure = Pressure(topPressure = 112, lowerPressure = 91)
-        ))
-            viewModel.getParameters(pets[0].id, Period.HOUR)
+            viewModel.getParameters(pets[0].id, Period.MONTH)
             viewModel.getParametersLiveData().observe(requireActivity(), Observer{
                 it?.let {
                     val tempValue = mutableListOf<Float>()
@@ -120,13 +83,15 @@ class MoreDataFragment : Fragment() {
                     val topPressureValue = mutableListOf<Float>()
                     val lowPressureValue = mutableListOf<Float>()
                     val period = mutableListOf<String>()
-                    for (params in parameters) {
+                    var i = 0
+                    for (params in it) {
                         tempValue.add(params.temperature.temperature)
                         heartRateValue.add(params.heartRate.heartRate.toFloat())
                         topPressureValue.add(params.pressure.topPressure.toFloat())
                         lowPressureValue.add(params.pressure.lowerPressure.toFloat())
                         breathingRateValue.add(params.breathingRate.breathingRate.toFloat())
-                        period.add(params.date)
+                        period.add((params.date.substring(11, 13).toInt() + i).toString())
+                        i++
                     }
                     graphMap["Температура"] = Graph("Температура", period, tempValue)
                     graphMap["Частота дыхания"] =

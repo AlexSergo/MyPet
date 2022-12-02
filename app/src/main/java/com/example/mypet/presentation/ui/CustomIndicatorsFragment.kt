@@ -36,12 +36,15 @@ class CustomIndicatorsFragment : Fragment() {
 
         val pets = callback.getPets()
         if (pets.isNotEmpty()) {
-            viewModel.getParameters(pets[0].id, Period.HOUR)
+            binding.petName.text = pets[0].name
+
+            viewModel.getParameters(pets[0].id, Period.MONTH)
             viewModel.getParametersLiveData().observe(requireActivity(), Observer {
                 it?.let {
-                    binding.breathingRate.text = it[0].breathingRate.toString()
-                    binding.temp.text = it[0].temperature.toString()
-                    binding.heartRate.text = it[0].heartRate.toString()
+                    binding.breathingRate.text = it[0].breathingRate.breathingRate.toString()
+                    binding.temp.text = it[0].temperature.temperature.toString()
+                    binding.heartRate.text = it[0].heartRate.heartRate.toString()
+                    binding.muscleActivity.text = it[0].muscleActivity.muscleActivity.toString()
                     binding.pressure.text = StringBuilder()
                         .append(it[0].pressure.topPressure.toString())
                         .append("/")

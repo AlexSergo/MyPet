@@ -5,5 +5,6 @@ data class Parameters(
     val heartRate: HeartRate,
     val pressure: Pressure,
     val temperature: Temperature,
+    val muscleActivity: MuscleActivity,
     val date: String
 )

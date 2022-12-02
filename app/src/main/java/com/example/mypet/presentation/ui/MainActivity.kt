@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), MainActivityCallback {
             name = intent.getStringExtra("clientName")!!,
             email = intent.getStringExtra("clientEmail")!!)
 
-            viewModel.getPets(user.id)
+        viewModel.getPets(user.id)
         viewModel.getPetsLiveData().observe(this, Observer {
             it?.let {
                 pets = it

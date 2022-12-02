@@ -44,8 +44,6 @@ class SignInFragment : Fragment() {
             viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
                 password = binding.passwordField.text.toString()))
 
-            callback.showProfile(User(id = 1, name = "Sasha", email = "sasha@mail.ru"))
-
            viewModel.getUserLiveData().observe(requireActivity(), Observer{
                 it?.let {
                     callback.showProfile(it)
@@ -53,8 +51,6 @@ class SignInFragment : Fragment() {
            })
             viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
                 password = binding.passwordField.text.toString()))
-
-            callback.showProfile(User(id = 1, name = "Sasha", email = "sasha@mail.ru"))
 
             viewModel.getUserLiveData().observe(requireActivity(), Observer{
                 it?.let {

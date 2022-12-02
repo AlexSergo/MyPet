@@ -2,6 +2,7 @@ package com.example.mypet.data
 
 import com.example.mypet.data.local_data_source.PetDao
 import com.example.mypet.data.remote_data_source.PetApi
+import com.example.mypet.data.remote_data_source.model.parameters.Parameters
 import com.example.mypet.data.remote_data_source.model.parameters.ParametersResponse
 import com.example.mypet.data.remote_data_source.model.pet.PetRegisterRequest
 import com.example.mypet.data.remote_data_source.model.pet.PetResponse
@@ -25,7 +26,7 @@ class RepositoryImpl(private val api: PetApi): Repository {
         return api.loginUser(username, password)
     }
 
-    override suspend fun getParameters(id: Int, period: String): ParametersResponse {
+    override suspend fun getParameters(id: Int, period: String): List<Parameters> {
         return api.getParameters(id, period)
     }
 

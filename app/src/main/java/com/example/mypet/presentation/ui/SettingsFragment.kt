@@ -15,10 +15,10 @@ class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
     private lateinit var sPref : SharedPreferences
-    var low_temp : Int = 0
-    var high_temp : Int = 0
-    val SAVED_TEXT : String = "saved_text"
-    val SAVED_HIGH_TEMP : String = "saved_text"
+    private var low_temp : Int = 0
+    private var high_temp : Int = 0
+    private val SAVED_LOW_TEMP : String = "low_temp"
+    private val SAVED_HIGH_TEMP : String = "high_temp"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +26,8 @@ class SettingsFragment : Fragment() {
     ): View? {
         binding = FragmentSettingsBinding.inflate(layoutInflater)
         loadText()
+        low_temp = binding.editLowTemp.text.toString().toInt()
+        high_temp = binding.editHighTemp.text.toString().toInt()
         binding.btnLess1.setOnClickListener{
             low_temp--
             binding.editLowTemp.apply { text = low_temp.toString() }
@@ -48,17 +50,16 @@ class SettingsFragment : Fragment() {
     private fun saveText() {
         sPref = requireActivity().getSharedPreferences("MyPref", MODE_PRIVATE)
         val ed = sPref.edit()
-        val ed2 = sPref.edit()
-        ed.putString(SAVED_TEXT, binding.editLowTemp.text.toString())
-        ed2.putString(SAVED_HIGH_TEMP, binding.editHighTemp.text.toString())
+        ed.putString(SAVED_LOW_TEMP, binding.editLowTemp.text.toString())
         ed.apply()
-        ed2.apply()
+        ed.putString(SAVED_HIGH_TEMP, binding.editHighTemp.text.toString())
+        ed.apply()
         Toast.makeText(requireActivity(), "Text saved", Toast.LENGTH_SHORT).show()
     }
 
     private fun loadText() {
         sPref = requireActivity().getSharedPreferences("MyPref", MODE_PRIVATE)
-        val savedText = sPref.getString(SAVED_TEXT, "")
+        val savedText = sPref.getString(SAVED_LOW_TEMP, "")
         val savedHighTemp = sPref.getString(SAVED_HIGH_TEMP, "")
         binding.editLowTemp.apply { text = savedText}
         binding.editHighTemp.apply { text = savedHighTemp}

@@ -15,13 +15,14 @@ class GetParametersUseCase(private val repository: Repository) {
         }
         val result = mutableListOf<Parameters>()
 
-        for (parameter in params.parametersArray){
+        for (parameter in params){
             result.add(Parameters(
-                breathingRate = BreathingRate(parameter.breathingRate.breathingRate),
-                heartRate = HeartRate(parameter.heartRate.heartRate),
+                breathingRate = BreathingRate(parameter.breathingRate),
+                heartRate = HeartRate(parameter.heartRate),
                 pressure = Pressure(parameter.pressure.topPressure, parameter.pressure.lowerPressure),
-                temperature = Temperature(parameter.temperature.temperature),
-                date = parameter.date
+                temperature = Temperature(parameter.temperature),
+                date = parameter.date,
+                muscleActivity = MuscleActivity(parameter.muscleActivity)
             ))
         }
         return result

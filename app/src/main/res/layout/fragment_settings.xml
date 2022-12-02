@@ -48,21 +48,23 @@
 
     <TextView
         android:id="@+id/low_temp"
-        android:layout_marginTop="30dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="start"
         android:text="@string/low_temperature"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/turn_on"/>
+        app:layout_constraintTop_toBottomOf="@+id/turn_on" />
 
     <TextView
         android:id="@+id/edit_low_temp"
-        android:text="@{low_temp}"
+        android:text="0"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         app:layout_constraintRight_toLeftOf="@+id/btn_less1"
         app:layout_constraintBottom_toBottomOf="@+id/low_temp"/>
 
@@ -92,21 +94,23 @@
 
     <TextView
         android:id="@+id/high_temp"
-        android:layout_marginTop="30dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="start"
         android:text="@string/high_temperature"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
         app:layout_constraintTop_toBottomOf="@+id/low_temp" />
 
     <TextView
         android:id="@+id/edit_high_temp"
-        android:text="@{high_temp}"
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintRight_toLeftOf="@+id/btn_less1"
         app:layout_constraintBottom_toBottomOf="@+id/high_temp"/>
 
@@ -136,23 +140,26 @@
 
     <TextView
         android:id="@+id/low_pressure"
-        android:layout_marginTop="30dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="start"
         android:text="@string/low_pressure"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/high_temp"/>
+        app:layout_constraintTop_toBottomOf="@+id/high_temp" />
 
     <EditText
         android:id="@+id/edit_low_pressure"
+        android:textSize="20dp"
+        android:text="0"
+        android:layout_marginEnd="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/btn_less1"
-        app:layout_constraintBottom_toBottomOf="@+id/low_pressure"/>
+        app:layout_constraintBottom_toBottomOf="@+id/low_pressure"
+        app:layout_constraintRight_toLeftOf="@+id/btn_less1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less3"
@@ -180,23 +187,26 @@
 
     <TextView
         android:id="@+id/high_pressure"
-        android:layout_marginTop="30dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="start"
         android:text="@string/high_pressure"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/low_pressure"/>
+        app:layout_constraintTop_toBottomOf="@+id/low_pressure" />
 
     <EditText
         android:id="@+id/edit_high_pressure"
+        android:textSize="20dp"
+        android:text="0"
+        android:layout_marginEnd="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/btn_less1"
-        app:layout_constraintBottom_toBottomOf="@+id/high_pressure"/>
+        app:layout_constraintBottom_toBottomOf="@+id/high_pressure"
+        app:layout_constraintRight_toLeftOf="@+id/btn_less1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton7"
@@ -224,23 +234,26 @@
 
     <TextView
         android:id="@+id/low_heart_rate"
-        android:layout_marginTop="30dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="start"
         android:text="@string/low_heart_rate"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/high_pressure"/>
+        app:layout_constraintTop_toBottomOf="@+id/high_pressure" />
 
     <EditText
         android:id="@+id/edit_low_heart_rate"
+        android:textSize="20dp"
+        android:text="0"
+        android:layout_marginEnd="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/btn_less1"
-        app:layout_constraintBottom_toBottomOf="@+id/low_heart_rate"/>
+        app:layout_constraintBottom_toBottomOf="@+id/low_heart_rate"
+        app:layout_constraintRight_toLeftOf="@+id/btn_less1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less5"
@@ -268,23 +281,26 @@
 
     <TextView
         android:id="@+id/high_heart_rate"
-        android:layout_marginTop="30dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="start"
         android:text="@string/high_heart_rate"
         android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/low_heart_rate"/>
+        app:layout_constraintTop_toBottomOf="@+id/low_heart_rate" />
 
     <EditText
         android:id="@+id/edit_high_heart_rate"
+        android:textSize="20dp"
+        android:text="0"
+        android:layout_marginEnd="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/btn_less1"
-        app:layout_constraintBottom_toBottomOf="@+id/high_heart_rate"/>
+        app:layout_constraintBottom_toBottomOf="@+id/high_heart_rate"
+        app:layout_constraintRight_toLeftOf="@+id/btn_less1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less6"
@@ -318,17 +334,20 @@
         android:gravity="start"
         android:text="@string/low_breathing_rate"
         android:textColor="@color/black"
-        android:textSize="22sp"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/high_heart_rate"/>
+        app:layout_constraintTop_toBottomOf="@+id/high_heart_rate" />
 
     <EditText
         android:id="@+id/edit_low_breathing_rate"
+        android:textSize="20dp"
+        android:text="0"
+        android:layout_marginEnd="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/btn_less1"
-        app:layout_constraintBottom_toBottomOf="@+id/low_breathing_rate"/>
+        app:layout_constraintBottom_toBottomOf="@+id/low_breathing_rate"
+        app:layout_constraintRight_toLeftOf="@+id/btn_less1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less7"
@@ -362,17 +381,20 @@
         android:gravity="start"
         android:text="@string/high_breathing_rate"
         android:textColor="@color/black"
-        android:textSize="22sp"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="@+id/turn_on"
-        app:layout_constraintTop_toBottomOf="@+id/low_breathing_rate"/>
+        app:layout_constraintTop_toBottomOf="@+id/low_breathing_rate" />
 
     <EditText
         android:id="@+id/edit_high_breathing_rate"
+        android:textSize="20dp"
+        android:text="0"
+        android:layout_marginEnd="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/btn_less1"
-        app:layout_constraintBottom_toBottomOf="@+id/high_breathing_rate"/>
+        app:layout_constraintBottom_toBottomOf="@+id/high_breathing_rate"
+        app:layout_constraintRight_toLeftOf="@+id/btn_less1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less8"

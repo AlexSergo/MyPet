@@ -1,5 +1,6 @@
 package com.example.mypet.domain
 
+import com.example.mypet.data.remote_data_source.model.parameters.Parameters
 import com.example.mypet.data.remote_data_source.model.parameters.ParametersResponse
 import com.example.mypet.data.remote_data_source.model.pet.PetRegisterRequest
 import com.example.mypet.data.remote_data_source.model.pet.PetResponse
@@ -15,7 +16,7 @@ interface Repository {
 
     suspend fun loginUser(username: String, password: String): UserResponse
 
-    suspend fun getParameters(id: Int, period: String): ParametersResponse
+    suspend fun getParameters(id: Int, period: String): List<Parameters>
 
     suspend fun getPets(ownerId: Int): List<PetResponse>
 }
