@@ -1,25 +1,22 @@
 package com.example.mypet.presentation.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.drawable.toDrawable
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.mypet.R
 import com.example.mypet.data.RepositoryInitializer
 import com.example.mypet.databinding.FragmentMoreDataBinding
 import com.example.mypet.domain.Period
-import com.example.mypet.domain.model.parameters.*
+import com.example.mypet.presentation.StringDate
 import com.example.mypet.presentation.view_model.PetViewModel
 import com.example.mypet.presentation.view_model.ViewModelFactory
 import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.ZoneId
-import java.time.ZoneOffset.UTC
-import java.time.format.DateTimeFormatter
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MoreDataFragment : Fragment() {
@@ -38,7 +35,33 @@ class MoreDataFragment : Fragment() {
         adapter = GraphAdapter()
         binding.recyclerviewItems.adapter = adapter
 
-        val graphs = getParametersForPeriod()
+        var period = Period.DAY
+        val today = StringDate.getToday()
+        binding.currentDate.text =  today
+
+        binding.dayButton.setOnClickListener {
+            period = Period.DAY
+            binding.dayButton.background = R.color.active_button.toDrawable()
+            binding.weekButton.background = R.color.white.toDrawable()
+            binding.monthButton.background = R.color.white.toDrawable()
+            binding.currentDate.text =  today
+        }
+        binding.weekButton.setOnClickListener {
+            period = Period.WEEK
+            binding.weekButton.background = R.color.active_button.toDrawable()
+            binding.dayButton.background = R.color.white.toDrawable()
+            binding.monthButton.background = R.color.white.toDrawable()
+            binding.currentDate.text = StringDate.getPreviousDate(today, 7) + " - " + today
+        }
+        binding.monthButton.setOnClickListener {
+            period = Period.MONTH
+            binding.monthButton.background = R.color.active_button.toDrawable()
+            binding.dayButton.background = R.color.white.toDrawable()
+            binding.weekButton.background = R.color.white.toDrawable()
+            val daysInMonth = Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH)
+            binding.currentDate.text = StringDate.getPreviousDate(today, daysInMonth)+ " - " + today
+        }
+        val graphs = getParametersForPeriod(period)
         chipGroupCheck(graphs)
         return binding.root
     }
@@ -69,12 +92,12 @@ class MoreDataFragment : Fragment() {
             .get(PetViewModel::class.java)
     }
 
-    private fun getParametersForPeriod(): MutableMap<String, Graph>{
+    private fun getParametersForPeriod(period: Period): MutableMap<String, Graph>{
         val graphMap = mutableMapOf<String, Graph>()
         val callback = requireActivity() as MainActivityCallback
         val pets = callback.getPets()
         if (pets.isNotEmpty()) {
-            viewModel.getParameters(pets[0].id, Period.MONTH)
+            viewModel.getParameters(pets[0].id, period)
             viewModel.getParametersLiveData().observe(requireActivity(), Observer{
                 it?.let {
                     val tempValue = mutableListOf<Float>()
@@ -82,7 +105,7 @@ class MoreDataFragment : Fragment() {
                     val heartRateValue = mutableListOf<Float>()
                     val topPressureValue = mutableListOf<Float>()
                     val lowPressureValue = mutableListOf<Float>()
-                    val period = mutableListOf<String>()
+                    val time = mutableListOf<String>()
                     var i = 0
                     for (params in it) {
                         tempValue.add(params.temperature.temperature)
@@ -90,14 +113,14 @@ class MoreDataFragment : Fragment() {
                         topPressureValue.add(params.pressure.topPressure.toFloat())
                         lowPressureValue.add(params.pressure.lowerPressure.toFloat())
                         breathingRateValue.add(params.breathingRate.breathingRate.toFloat())
-                        period.add((params.date.substring(11, 13).toInt() + i).toString())
+                        time.add((params.date.substring(11, 13).toInt() + i).toString())
                         i++
                     }
-                    graphMap["Температура"] = Graph("Температура", period, tempValue)
+                    graphMap["Температура"] = Graph("Температура", time, tempValue)
                     graphMap["Частота дыхания"] =
-                        Graph("Частота дыхания", period, breathingRateValue)
-                    graphMap["ЧСС"] = Graph("ЧСС", period, heartRateValue)
-                    graphMap["Давление"] = Graph("Давление", period, topPressureValue)
+                        Graph("Частота дыхания", time, breathingRateValue)
+                    graphMap["ЧСС"] = Graph("ЧСС", time, heartRateValue)
+                    graphMap["Давление"] = Graph("Давление", time, topPressureValue)
                 }
             })
         }

@@ -89,7 +89,7 @@
 
             <Button
                 android:layout_marginEnd="16dp"
-                android:id="@+id/button"
+                android:id="@+id/dayButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
@@ -100,7 +100,7 @@
             <Button
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:id="@+id/button2"
+                android:id="@+id/weekButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
@@ -110,7 +110,7 @@
 
             <Button
                 android:layout_marginStart="16dp"
-                android:id="@+id/button3"
+                android:id="@+id/monthButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
@@ -131,10 +131,10 @@
                 app:elevation="0dp"
                 app:layout_collapseMode="pin"
                 app:layout_constraintTop_toBottomOf="@+id/linear"
-                app:layout_constraintEnd_toStartOf="@+id/day_month_year" />
+                app:layout_constraintEnd_toStartOf="@+id/currentDate" />
 
             <TextView
-                android:id="@+id/day_month_year"
+                android:id="@+id/currentDate"
                 android:layout_marginTop="12dp"
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
@@ -149,17 +149,16 @@
 
             <TextView
                 android:id="@+id/time"
-                android:layout_marginTop="8dp"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="16:44"
                 android:textColor="@color/black"
+                android:textSize="20sp"
                 app:layout_collapseMode="pin"
-                app:layout_constraintTop_toBottomOf="@+id/btn_less"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/btn_less" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

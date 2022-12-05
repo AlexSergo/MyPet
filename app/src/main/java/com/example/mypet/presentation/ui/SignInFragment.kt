@@ -1,5 +1,6 @@
 package com.example.mypet.presentation.ui
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -14,7 +15,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mypet.data.RepositoryInitializer
 import com.example.mypet.databinding.FragmentSignInBinding
-import com.example.mypet.domain.model.user.User
 import com.example.mypet.domain.model.user.UserLogin
 import com.example.mypet.presentation.view_model.PetViewModel
 import com.example.mypet.presentation.view_model.ViewModelFactory
@@ -25,6 +25,8 @@ class SignInFragment : Fragment() {
 
     private lateinit var viewModelFactory: ViewModelFactory
     private lateinit var viewModel: PetViewModel
+    private val EMAIL = "email"
+    private val PASSWORD = "password"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,24 +43,29 @@ class SignInFragment : Fragment() {
         }
 
         binding.buttonSignIn.setOnClickListener {
-            viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
-                password = binding.passwordField.text.toString()))
-
-           viewModel.getUserLiveData().observe(requireActivity(), Observer{
-                it?.let {
-                    callback.showProfile(it)
-                }
-           })
-            viewModel.loginClient(UserLogin(email = binding.emailField.text.toString(),
-                password = binding.passwordField.text.toString()))
+            val email = binding.emailField.text.toString()
+            val password = binding.passwordField.text.toString()
+            viewModel.loginClient(UserLogin
+                (email = email,
+                password = password))
 
             viewModel.getUserLiveData().observe(requireActivity(), Observer{
                 it?.let {
+                    saveUserData(email, password)
                     callback.showProfile(it)
                 }
             })
         }
         return binding.root
+    }
+
+    private fun saveUserData(email: String, password: String) {
+        val sPref = requireActivity().getSharedPreferences("UserPref", Context.MODE_PRIVATE)
+        val ed = sPref.edit()
+        ed.putString(EMAIL,email)
+        ed.apply()
+        ed.putString(PASSWORD, password)
+        ed.apply()
     }
 
     private fun viewModelInit(){

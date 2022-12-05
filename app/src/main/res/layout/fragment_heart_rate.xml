@@ -32,18 +32,18 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_previous"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/dayButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:text="@string/day"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button2"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"/>
+        app:layout_constraintRight_toLeftOf="@+id/weekButton"
+        app:layout_constraintBottom_toBottomOf="@+id/weekButton"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/weekButton"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,15 +55,15 @@
         app:layout_constraintTop_toBottomOf="@+id/header"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/monthButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:text="@string/month"
         android:textColor="@color/black"
-        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintLeft_toRightOf="@+id/weekButton"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"/>
+        app:layout_constraintBottom_toBottomOf="@+id/weekButton"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_less"
@@ -74,11 +74,11 @@
         android:src="@drawable/less"
         app:backgroundTint="#00FFFFFF"
         app:elevation="0dp"
-        app:layout_constraintRight_toLeftOf="@+id/day_month_year"
-        app:layout_constraintTop_toBottomOf="@+id/button"/>
+        app:layout_constraintRight_toLeftOf="@+id/currentDate"
+        app:layout_constraintTop_toBottomOf="@+id/dayButton"/>
 
     <TextView
-        android:id="@+id/day_month_year"
+        android:id="@+id/currentDate"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,6 +100,6 @@
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/day_month_year"/>
+        app:layout_constraintTop_toBottomOf="@+id/currentDate"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
