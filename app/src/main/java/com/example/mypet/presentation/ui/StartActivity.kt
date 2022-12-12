@@ -35,25 +35,26 @@ class StartActivity : AppCompatActivity(), RegisterActivityCallback {
         super.onCreate(savedInstanceState)
 
         viewModelInit()
-        val user = loadUserData()
-        if (user != null) {
-            viewModel.loginClient(UserLogin
-                (email = user.email,
-                password = user.password))
-
-            viewModel.getUserLiveData().observe(this, Observer{
-                it?.let {
-                    showProfile(it)
-                }
-            })
-        }
-        else
-            supportFragmentManager.beginTransaction()
-                .replace(binding.fragmentContainerView.id, SignInFragment())
-                .commit()
 
         binding = ActivityStartBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val user = loadUserData()
+            if (user != null) {
+                viewModel.loginClient(UserLogin
+                    (email = user.email,
+                    password = user.password))
+
+                viewModel.getUserLiveData().observe(this, Observer{
+                    it?.let {
+                        showProfile(it)
+                    }
+                })
+            }
+            else
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainerView.id, SignInFragment())
+            .commit()
+
     }
 
     private fun loadUserData(): SavedUser? {
